@@ -11,5 +11,5 @@ build:				## Build docker image copying the current html folder
 run: build			## Run the webpage on 8080
 	docker run --rm -p 8080:80 $(DOCKER_IMAGE)
 
-dev: build			## Rub the webpage on 8080 mounting the html folder 
+dev: build			## Run the webpage on 8080 mounting docs on the nginx html folder 
 	docker run --rm -p 8080:80 -v $(PWD)/docs:/usr/share/nginx/html $(DOCKER_IMAGE)
