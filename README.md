@@ -8,6 +8,8 @@ Static site for a videogame made with RPG Maker about the pkts community, full o
 
 The webpage uses [Templated Theory Site Template](https://templated.co/theory).
 
+The clock uses [wimbarelds/TimeCircles](https://github.com/wimbarelds/TimeCircles).
+
 ## Run
 
 The website can be deployed with docker at localhost:8080 using the makefile targets:

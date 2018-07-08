@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/TimeCircles.css" />
 	</head>
 	<body>
 
@@ -26,6 +27,7 @@
 			<section id="banner">
 				<h1>pkts | The Game</h1>
 				<p>the always wanted immersive simulation slow-paced role playing game by pkts for pkts about pkts</p>
+				<div id="countdown" data-date="2018-07-16 00:44:00" style="width: 90%; margin: auto;"></div>
 			</section>
 
 		<!-- About -->
@@ -184,6 +186,41 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+	<script src="assets/js/TimeCircles.js"></script>
+	<script src="assets/js/underscore-min.js"></script>
+	<script>
+		$(window).resize(_.throttle(function () {
+			$("#countdown").TimeCircles().rebuild();
+		}, 500));
+		var clock = $("#countdown").TimeCircles({
+			"animation": "smooth",
+			"bg_width": 0.2,
+			"fg_width": 0.03,
+			"circle_bg_color": "#90989F",
+			"time": {
+				"Days": {
+					"text": "Days",
+					"color": "#fff",
+					"show": true
+				},
+				"Hours": {
+					"text": "Hours",
+					"color": "#fff",
+					"show": true
+				},
+				"Minutes": {
+					"text": "Minutes",
+					"color": "#fff",
+					"show": true
+				},
+				"Seconds": {
+					"text": "Seconds",
+					"color": "#fff",
+					"show": true
+				}
+			}
+		});
+	</script>
 
 	</body>
 </html>
