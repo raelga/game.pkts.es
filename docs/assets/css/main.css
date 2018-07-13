@@ -2213,6 +2213,25 @@
 					max-width: 100%;
 				}
 
+		.box.award {
+			border: solid 1px rgba(255, 255, 255, 0.25);
+			padding: 1.5em 1.5em;
+			display: flex;
+			align-items: center;
+		}
+
+			.box.award h3 {
+				margin: 0;
+			}
+
+			.box.award .image {
+				margin: 1em 1em;
+			}
+
+				.box.award .image img {
+					max-width: 100%;
+				}
+
 /* Icon */
 
 	.icon {
